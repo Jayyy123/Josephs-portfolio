@@ -1,0 +1,16 @@
+{
+  "name": "josephs-portfolio-backend",
+  "version": "1.0.0",
+  "description": "My Portfolio website backend",
+  "main": "server.js",
+  "scripts": {
+    "dev-start":"nodemon server",
+    "prod-start":"node start",
+    "test": "node test"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Joseph Ofili",
+  "license": "MIT"
+}

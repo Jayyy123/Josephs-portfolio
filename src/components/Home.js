@@ -12,13 +12,14 @@ class Home extends Component {
       super(props)
     
       this.state = {
-        keywords:""
+        keywords:"",
+        lines:false,
       }
     }
 
 
     componentDidMount = () => {
-      let wordArray = ["a Backend developer |", "\n", "a Frontend developer |", "\n", " and a", "\n",  "Mobile developer |"]
+      let wordArray = ["a Backend developer ", " a Frontend developer ", " and a",  "Mobile developer "]
       let letters = wordArray.join("").split("")
       let backupLetters = wordArray.join("").split("")
       setInterval(()=>{
@@ -40,18 +41,30 @@ class Home extends Component {
 
   render() {
       const { keywords } = this.state
+      const { lines, setLines } = this.props.value
     return (
         <div className='body' onScroll={this.addEffect()}>
+
+          <div className='hamburger'>
+            <div onClick={()=>setLines()} className= {lines ? 'line lines' : 'line'}></div>
+            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line'}></div>
+            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line'}></div>
+          </div>
+
           <div className='hero'>
             <div id='hero' className="hero-container">
                 <h1>Joseph Ofili</h1>
-                <p>I'm <span>{keywords}</span></p>
+                <p>I'm <span>{keywords}|</span></p>
             </div>
             <div className='right'>
-              <img src={git} alt="github" />
-              <h4> <a href='https://www.github.com/jayyy123'> <b>Joseph's Githhub</b>  </a> </h4>
-              <img src={linkedin} alt="linkedin" className='linkedin'/>
-              <h4> <a href='https://www.linkedin.com/in/joseph-ofili/'> <b>Joseph's Linkedin</b> </a> </h4>
+              <div>
+                <img src={git} alt="github" />
+                <h4> <a href='https://www.github.com/jayyy123'> <b>Joseph's Githhub</b>  </a> </h4>
+              </div>
+              <div>
+                <img src={linkedin} alt="linkedin" className='linkedin'/>
+                <h4> <a href='https://www.linkedin.com/in/joseph-ofili/'> <b>Joseph's Linkedin</b> </a> </h4>
+              </div>
             </div>
           </div>
         <About />

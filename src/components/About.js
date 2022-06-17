@@ -87,7 +87,7 @@ export class About extends Component {
                 </div>
 
                 <div className="resume-div">
-                <div class="resume-div-container">
+                <div className="resume-div-container">
                     <h3 className="resume-title">Summary</h3>
                     <div className="resume-item pb-0">
                     <h4>Joseph Ofili</h4>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import About from './About'
 import git from '../github.webp'
 import linkedin from '../linkedin.png'
+import cv from '../cv.png'
 import Contact from './Contact'
 
 class Home extends Component {
@@ -19,7 +20,7 @@ class Home extends Component {
 
 
     componentDidMount = () => {
-      let wordArray = ["a Backend developer ", " a Frontend developer ", " and a",  "Mobile developer "]
+      let wordArray = ["a Backend developer ", " a Frontend developer ", " and a",  " Mobile developer "]
       let letters = wordArray.join("").split("")
       let backupLetters = wordArray.join("").split("")
       setInterval(()=>{
@@ -46,9 +47,9 @@ class Home extends Component {
         <div className='body' onScroll={this.addEffect()}>
 
           <div className='hamburger'>
-            <div onClick={()=>setLines()} className= {lines ? 'line lines' : 'line'}></div>
-            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line'}></div>
-            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line'}></div>
+            <div onClick={()=>setLines()} className= {lines ? 'line lines' : 'line lines1'}></div>
+            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line lines1'}></div>
+            <div onClick={()=>setLines()} className={lines ? 'line lines' : 'line lines1'}></div>
           </div>
 
           <div className='hero'>
@@ -64,6 +65,10 @@ class Home extends Component {
               <div>
                 <img src={linkedin} alt="linkedin" className='linkedin'/>
                 <h4> <a href='https://www.linkedin.com/in/joseph-ofili/'> <b>Joseph's Linkedin</b> </a> </h4>
+              </div>
+              <div>
+                <img src={cv} alt="cv" className='cv'/>
+                <h4> <a href='https://docs.google.com/document/d/1jM3xDvYeyvY18k68SBtupCqG0NFv8QemlWpuGIqnnVA/edit?usp=sharing'> <b>Josephs Resume </b></a> </h4>
               </div>
             </div>
           </div>

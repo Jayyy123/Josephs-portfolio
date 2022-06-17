@@ -82,8 +82,8 @@ export class About extends Component {
             <div className="container">
 
                 <div className="section-title">
-                <h2>Resume</h2>
-                <p>Joseph's Resume</p>
+                <h2>Resume </h2>
+                <p>Joseph's Resume <span> <a href='https://docs.google.com/document/d/1jM3xDvYeyvY18k68SBtupCqG0NFv8QemlWpuGIqnnVA/edit?usp=sharing'> View </a> </span> </p>
                 </div>
 
                 <div className="resume-div">

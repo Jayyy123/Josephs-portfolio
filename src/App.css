@@ -131,7 +131,6 @@ body{
 .hero .right{
   position: absolute;
   left: 78%;
-  top: 2%;
   z-index: 1000;
 }
 
@@ -140,6 +139,12 @@ body{
   height: 150px;
 }
 .hero .right .linkedin{
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+}
+.hero .right .cv{
   background-color: lightblue;
   width: 150px;
   height: 150px;
@@ -664,24 +669,27 @@ label{
   .hero .right{
     display: flex;
     top: 88vh;
-    left: 24px;
+    left: 5px;
     align-items: center;
     justify-content: center;
   }
   .hero .right img,
-  .hero .right .linkedin
+  .hero .right .linkedin,
+  .hero .right .cv
   {
     
     width: 30px;
     height: 30px;
     margin: 0;
   }
+
   .hero .right div{
     display: flex;
     align-items: center;
   }
   .hero .right h4{
-    padding-left: 16px;
+    padding-left: 14px;
+    font-size: small;
   }
 
   .portfolio .body{
@@ -750,6 +758,36 @@ label{
   .hamburger .lines:last-child{
     animation: liness 1s none;
     transform: rotateZ(-45deg) translateY(-5px) translateX(4px) ;
+  }
+  @keyframes lines1 {
+    to{
+      transform: rotateZ(0deg) translateY(0px) translateX(0px);
+    }
+    from{
+      transform: rotateZ(45deg) translateY(5px) translateX(4px);
+    }
+  }
+  
+  @keyframes liness1 {
+    to{
+      transform: rotateZ(0deg) translateY(0px) translateX(0px);
+    }
+    from{
+      transform: rotateZ(-45deg) translateY(-5px) translateX(4px) ;
+    }
+  }
+  .hamburger .lines1:nth-child(2){
+    visibility: visible;
+  }
+  
+  .hamburger .lines1:first-child{
+    animation: lines1 1s none;
+    transform: rotateZ(0deg) translateY(0px) translateX(0px);
+  }
+  
+  .hamburger .lines1:last-child{
+    animation: liness1 1s none;
+    transform: rotateZ(0deg) translateY(0px) translateX(0px);
   }
   
 }

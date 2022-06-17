@@ -82,8 +82,8 @@ class Splash extends Component {
             ) : 
             (
             <div className={done ? 'splash text' : 'splash' }>
-                <h1 className={done && 'text'} >{keywords}|</h1>
-                <p className={done && 'text'} onClick={cont ? this.continue : this.skipIntro}> {cont ? 'continue →' : 'skip intro ⏭'} </p>
+                <h1 className={done ? 'text' : ''} >{keywords}|</h1>
+                <p className={done ? 'text' : ''} onClick={cont ? this.continue : this.skipIntro}> {cont ? 'continue →' : 'skip intro ⏭'} </p>
             </div>
             )}
         </>

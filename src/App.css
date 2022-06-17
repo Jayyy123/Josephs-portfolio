@@ -163,6 +163,7 @@ body{
   bottom: 0;
   top: 0;
   left: 0;
+  height: 100vh;
   right: 0;
   z-index: 1;
   margin-left: -100px;
@@ -292,6 +293,226 @@ section {
   height: 600px;
   padding-right: 24px;
 }
+
+
+.portfolio .row .filters{
+  color: #fff;
+  border-radius: 30px;
+  background-color: #050d18;
+  width: 300px;
+  position: relative;
+  left: 30%;
+  padding: 2px;
+  border: 3px solid #37b3ed;
+}
+
+.filters ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filters ul li{
+  cursor: pointer;
+}
+
+.filters ul li:hover{
+  border-radius: 30px;
+  background-color: #0d6efd;
+  padding: 3px;
+}
+
+.filter-active{
+  border-radius: 30px;
+  background-color: #0d6efd;
+  padding: 3px;
+}
+
+.filters ul:last-child{
+  margin-right: 50px;
+}
+
+
+.projects{
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects img{
+  width: 250px;
+  height: 250px;
+}
+
+.project-panel{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #149ddd;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.project-hp{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin: 0px;
+  background-color: #149ddd;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.visible{
+  visibility: visible;
+}
+
+.view{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: #050d18;
+  color: white;
+  left: 0px;
+  top: 0px;
+  z-index: 1000000;
+}
+
+.view .title h2{
+  padding-left:30%;
+  padding-right: 30%;
+
+}
+
+.view p{
+  text-align: center;
+  cursor: pointer;
+}
+
+.view .title p{
+  font-size: xx-large;
+}
+
+
+.gallery{
+  display: flex;
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative;
+  left: 25%;
+  align-items: center;
+}
+
+.gal{
+  width: 700px;
+  height: 700px;
+  display: flex;
+}
+
+.gallery .gal img{
+  width: 700px;
+  height: 700px;
+  padding-right: 20px;
+}
+
+.proj{
+  margin-left: 24px;
+  width: 250px;
+}
+
+.project-panel p:last-child{
+  margin-left: 50px;
+}
+.project-panel p:first-child{
+  margin-left: -10px;
+  margin-right: 50px;
+}
+
+.view .title{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+@keyframes panel {
+  from{
+    transform: translateY(30px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+@keyframes hp {
+  from{
+    transform: translateY(-30px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+.projects .proj:hover{
+  border: 3px solid #18d26e;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  animation: panel 0.1s linear;
+}
+
+#proj:hover > #panel{
+  visibility: visible;
+  animation: panel 0.3s linear;
+}
+#proj:hover > #hp{
+  visibility: visible;
+  animation: hp 0.3s linear;
+}
+
+.project-panel-animation{
+  animation: panel 0.3s linear;
+}
+
+.hp{
+  animation: hp 0.3s linear;
+  margin: 0px;
+}
+
+.selected-project{
+  border: 3px solid #18d26e;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.project-panel p:hover{
+  cursor: pointer;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+}
+.lang {
+  width: 200px;
+  margin-left: 310px;
+  margin-top: 10px;
+  display: flex;
+}
+
+.lang select{
+  height: 50px;
+  background-color: #050d18;
+  width: 200px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 30px;
+}
+
 
 .skills{
   padding: 16px;
@@ -573,11 +794,6 @@ label{
 }
 
 
-.loader{
-
-}
-
-
 /*--------------------------------------------------------------
 # Breadcrumbs and media queries
 --------------------------------------------------------------*/
@@ -623,9 +839,6 @@ label{
     left: -300px;
     visibility: hidden;
   }
-  body{
-
-  }
 
   .splash{
     left: 10%;
@@ -635,6 +848,20 @@ label{
 
   .splash h1{
     max-width: 300px;
+  }
+
+  .portfolio .row .filters{
+    left:2%;
+  }
+  .row{
+    display: block;
+  }
+  .lang{
+    margin-left: 10px;
+  }
+
+  .portfolio .projects{
+    display: block;
   }
 
   .hero{
@@ -692,6 +919,19 @@ label{
     font-size: small;
   }
 
+  .about-content{
+    display: block;
+  }
+
+  .about{
+    padding: 7px;
+    margin-top: 50px;
+  }
+
+  .contact-main{
+    display: block;
+  }
+
   .portfolio .body{
     width: 100%;
     color: white;
@@ -716,6 +956,32 @@ label{
   }
   .hero .hero-container{
     z-index: 1;
+  }
+  .view{
+    position: fixed;
+    
+  }
+  .gallery{
+    display: flex;
+    width: 400px;
+    height: 50vh;
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+    align-items: center;
+    left: 0%;
+  }
+  .gal{
+    width: 400px;
+    height: 50vh;
+  }
+  .gal img{
+    width: 400px;
+    height: 100%;
+    object-fit: contain;
+  }
+  .title h2{
+    font-size: large;
   }
 
   .hamburger .line{

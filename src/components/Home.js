@@ -5,6 +5,7 @@ import git from '../github.webp'
 import linkedin from '../linkedin.png'
 import cv from '../cv.png'
 import Contact from './Contact'
+import Portfolio from './Portfolio'
 
 class Home extends Component {
     // 
@@ -15,6 +16,7 @@ class Home extends Component {
       this.state = {
         keywords:"",
         lines:false,
+        filter:'all',
       }
     }
 
@@ -40,8 +42,12 @@ class Home extends Component {
       
     }
 
+    handleFilter = (filter) => {
+      this.setState({filter})
+    }
+
   render() {
-      const { keywords } = this.state
+      const { keywords, filter } = this.state
       const { lines, setLines } = this.props.value
     return (
         <div className='body' onScroll={this.addEffect()}>
@@ -73,6 +79,7 @@ class Home extends Component {
             </div>
           </div>
         <About />
+        <Portfolio value = {{filter,handleFilter:this.handleFilter}} />
         <Contact />
       </div>
     )

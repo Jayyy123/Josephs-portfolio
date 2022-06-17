@@ -36,7 +36,7 @@ export class Contact extends Component {
 
                 <div className='form'>
                     <form action="forms/contact.php" method="post" className="php-email-form">
-                    <div class="row">
+                    <div className="row">
                         <div className="form-group col-md-6">
                         <label htmlFor="name">Your Name</label>
                         <input type="text" name="name" className="form-control" id="name" required />
@@ -52,14 +52,14 @@ export class Contact extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="name">Message</label>
-                        <textarea class="form-control" name="message" rows="10" required></textarea>
+                        <textarea className="form-control" name="message" rows="10" required></textarea>
                     </div>
-                    <div classNAme="my-3">
+                    <div className="my-3">
                         <div className="loading">Loading</div>
                         <div className="error-message"></div>
                         <div className="sent-message">Your message has been sent. Thank you!</div>
                     </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
+                    <div className="text-center"><button type="submit">Send Message</button></div>
                     </form>
                 </div>
 

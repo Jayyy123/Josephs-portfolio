@@ -21,12 +21,12 @@ export class Contact extends Component {
                         <p>Ajao Estate, Lagos Nigeria</p>
                     </div>
 
-                    <div class="email">
+                    <div className="email">
                         <h4>Email:</h4>
                         <p>josephofilii@gmail.com</p>
                     </div>
 
-                    <div class="phone">
+                    <div className="phone">
                         <h4>Call:</h4>
                         <p>+234 7060942709</p>
                     </div>
@@ -38,20 +38,20 @@ export class Contact extends Component {
                     <form action="forms/contact.php" method="post" className="php-email-form">
                     <div class="row">
                         <div className="form-group col-md-6">
-                        <label for="name">Your Name</label>
+                        <label htmlFor="name">Your Name</label>
                         <input type="text" name="name" className="form-control" id="name" required />
                         </div>
                         <div className="form-group col-md-6">
-                        <label for="name">Your Email</label>
+                        <label htmlFor="name">Your Email</label>
                         <input type="email" className="form-control" name="email" id="email" required />
                         </div>
                     </div>
                     <div className="form-group">
-                        <label for="name">Subject</label>
+                        <label htmlFor="name">Subject</label>
                         <input type="text" className="form-control" name="subject" id="subject" required />
                     </div>
                     <div className="form-group">
-                        <label for="name">Message</label>
+                        <label htmlFor="name">Message</label>
                         <textarea class="form-control" name="message" rows="10" required></textarea>
                     </div>
                     <div classNAme="my-3">

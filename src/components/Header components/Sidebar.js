@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import joseph from '../../joseph-face.jpeg'
+import joseph from '../../jo.jpg'
 
 class Sidebar extends Component {
   render() {
+    const { lines } = this.props.value
     return (
-      <div className='sidebar-container'>
+      <div className={lines ? 'sidebar-container' : 'sidebar-container side-c'}>
 
           <img src={joseph} alt="Joseph"/>
 

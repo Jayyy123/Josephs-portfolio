@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Gallery from './Gallery'
-import git from '../github.webp'
 
 class Project extends Component {
     constructor(props) {

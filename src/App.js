@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   render() {
-    const { lines,loading,done,setLoaders } = this.state
+    const { lines,loading } = this.state
     return (
       <div className='portfolio'>
 

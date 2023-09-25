@@ -25,7 +25,7 @@ class Portfolio extends Component {
     
                 <div className="section-title">
                     <h2>Portfolio</h2>
-                    <p>Feel free to explore some of my past projects!</p>
+                    <p style={{color:"black"}}>Feel free to explore some of my past projects!</p>
                 </div>
         
                 <div className="row" >

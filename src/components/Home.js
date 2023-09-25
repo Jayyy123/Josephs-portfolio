@@ -24,8 +24,9 @@ class Home extends Component {
     componentDidMount = () => {
       let wordArray = ["a Backend developer ", " a Frontend developer ", " and a",  " Mobile developer "]
       let letters = wordArray.join("").split("")
-      let backupLetters = wordArray.join("").split("")
       setInterval(()=>{
+        let backupLetters = wordArray.join("").split("")
+        console.log(letters,'here')
           if(letters.length > 0){
               const current =  letters[0]
               const keywords = this.state.keywords + current

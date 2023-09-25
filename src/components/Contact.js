@@ -18,7 +18,7 @@ export class Contact extends Component {
                     <div className="info">
                     <div className="address">
                         <h4>Location:</h4>
-                        <p>Ajao Estate, Lagos Nigeria</p>
+                        <p>Ibeju Lekki, Lagos Nigeria</p>
                     </div>
 
                     <div className="email">
@@ -37,11 +37,13 @@ export class Contact extends Component {
                 <div className='form'>
                     <form action="forms/contact.php" method="post" className="php-email-form">
                     <div className="row">
-                        <div className="form-group col-md-6">
+                        <div className="form-group">
                         <label htmlFor="name">Your Name</label>
                         <input type="text" name="name" className="form-control" id="name" required />
                         </div>
-                        <div className="form-group col-md-6">
+                    </div>
+                    <div className="row">
+                        <div className="form-group">
                         <label htmlFor="name">Your Email</label>
                         <input type="email" className="form-control" name="email" id="email" required />
                         </div>

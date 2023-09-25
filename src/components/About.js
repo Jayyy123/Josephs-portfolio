@@ -1,15 +1,44 @@
 import React, { Component } from 'react'
-import joseph from  '../joseph-sittin.jpg'
+import joseph from  '../jo-cool.jpeg'
 
 export class About extends Component {
+    constructor(props) {
+        super(props)
+      
+        this.state = {
+            age:0,
+        }
+      }
+
+    setDate = () => {
+        const date = new Date()
+        const birthDate = new Date(2000, 5, 15)
+        const age = Math.floor((date - birthDate) / 31557600000)
+        this.setState({age})
+    }
+
+    componentDidMount = () => {
+        this.setDate()
+    }
+
   render() {
+    const { age } = this.state
     return (
         <>
         <section id='about' className="about">
             <div className="container">
                 <div className="section-title">
                 <h2>About</h2>
-                <p>I work well under pressure. I see myself as someone who loves staring projects and seeing them through. I am always looking for better more efficient ways to write cleaner and more reusable code.</p>
+                <h4>Personally: </h4>
+                <p>
+                    I'm an avid fan of animes, movies, and DC content. I enjoy TV shows and find relaxation in chess.
+                </p>
+                <h4>
+                    Professionally: 
+                    </h4>
+                <p>
+                    I serve as a Full Stack Engineer at Manaknightdigital, focusing on backend development, data science, and cloud technologies. My skill set includes Node.js, Express.js, CSS, React, AWS services, and more. Currently pursuing a Computer Engineering degree at Obafemi Awolowo University, I'm passionate about mentoring as a Backend Lead at Google Developer Student Club OAU. My goal is to contribute to impactful projects and continually expand my tech expertise.
+                </p>
                 </div>
 
                 <div className="about-content">
@@ -17,15 +46,16 @@ export class About extends Component {
                     <img src={joseph} alt=""/>
                 </div>
                 <div className="content">
-                    <h3> Mobile &amp; Web Developer.</h3>
+                    <h3> Web &amp; Mobile Developer.</h3>
                     <p className="">
-                    I also build backends of websites using both Django and Node.js. I build apis using either Ktor for Kotlin or Django rest framework + dango-rest Knox for Web tokens and authentication and consume them in both python and javascript. I make use of React for the frontend. I also use simple jwt for node tokens.
+                    I have professional experience in backend development, data science, cloud technologies, and payment services, using Node.js, Express.js, Sequelize, CSS, Bootstrap, React, Tailwind CSS, ETA, Git, Jenkins, AWS Lambdas, EC2, RDS, SSD, Stripe, and more. I have also written bash scripts and cronjobs for backup, automation, and communication purposes.
                     </p>
                     <div className="">
                     <div className="">
                         <ul>
                         <li> <strong>Birthday:</strong> <span>15 May 2000</span></li>
-                        <li> <strong>Website:</strong> <span>www.example.com</span></li>
+                        <li> <strong>Website:</strong> <a style={{color:'white'}} href='josephofili.live'>josephofili.live</a></li>
+                        <li> <strong>Skype:</strong> <span>live:.cid.246d4705ff34582</span></li>
                         <li> <strong>Phone (calls):</strong> <span>+234 7060942709</span></li>
                         <li> <strong>Phone (whatsapp):</strong> <span>+234 8185760425</span></li>
                         <li> <strong>City:</strong> <span>Lagos, Nigeria</span></li>
@@ -33,14 +63,14 @@ export class About extends Component {
                     </div>
                     <div className="">
                         <ul>
-                        <li> <strong>Age:</strong> <span>22</span></li>
+                        <li> <strong>Age:</strong> <span>{age}</span></li>
                         <li> <strong>Degree:</strong> <span>BSc Computer Science and Engineering</span></li>
                         <li> <strong>Email:</strong> <span>josephofilii@gmail.com</span></li>
                         </ul>
                     </div>
                     </div>
                     <p>
-                    I've worked with Firebase, Room, Retrofit libraries, SQL and SQLite, View binding, and MVVM architecture.
+                    I am passionate about learning new technologies and applying them to real-world problems.I am looking for opportunities to grow as a Full Stack Engineer and to work on challenging and impactful projects that align with my values and goals. I am confident that my skills, experience, and education make me a valuable asset for any organization.
                     </p>
                 </div>
                 </div>
@@ -117,7 +147,7 @@ export class About extends Component {
                     <h3 className="resume-title">Professional Experience</h3>
                     <div className="resume-item">
                     <h4>Junior Backend and Frontend Developer(Nodejs, Reactjs + Firebase)</h4>
-                    <h5>2022 - Present</h5>
+                    <h5>2022</h5>
                     <p><em>Dimechest</em></p>
                     <ul>
                         <li>Responsible for fixing bugs and adding new features to the website </li>
@@ -126,17 +156,58 @@ export class About extends Component {
                     </ul>
                     </div>
                     <div className="resume-item">
-                    <h4>Junior Mobile and Backend Developer(Nodejs, ReactNative + sequelize + postgres)</h4>
-                    <h5>2022 - present</h5>
-                    <p><em>Honest Properties</em></p>
+                    <h4>Junior Web Developer</h4>
+                    <h5>2022</h5>
+                    <p><em>Zummit Africa</em></p>
+                    </div>
+                    <div className="resume-item">
+                    <h4>Backend Developer</h4>
+                    <h5>2022</h5>
+                    <p><em>Ajo Card</em></p>
+                    </div>
+                    <div className="resume-item">
+                    <h4>Backend Developer</h4>
+                    <h5>2022 - 2023</h5>
+                    <p><em>Elva Learn Academy · Internship</em></p>
+                    </div>
+                    <div className="resume-item">
+                    <h4>Full Stack Engineer</h4>
+                    <h5>2022 - Present</h5>
+                    <p><em>
+                    Manaknightdigital Ontario, CanadaOntario, Canada
+                    Full Stack Engineer
                     <ul>
-                        <li>Responsible for fixing bugs and adding new features to the app</li>
-                        <li>Responsible for updating the backend server and deploying to gcp using github actions</li>
+                    My day to day involves
+                    <li>
+                     using git as version controlling system, Jenkins as CI/CD Pipeline, Aws lambdas, ec2 instances, RDS, SSD nodes
+                    </li>
+                    <li>
+                     writing bash scripts to run on the server, building and maintaining cronjobs for backing up to aws or google drive or making posts or sending emails and sms and working with stripe as a payment service.
+                    </li>
+                    <li>
+                      using git as version controlling system, Jenkins as CI/CD Pipeline, Aws lambdas, ec2 instances, RDS, SSD nodes 
+                    </li>
+                    <li>
+                      writing bash scripts to run on the server, building and maintaining cronjobs for backing up to aws or google drive or making posts or sending emails and sms and working with stripe as a payment service.  
+                    </li>
+                    <li>
+                     utilizing NodeJs, ExpressJs, Sequelize, Mysql as main Database and Redis for caching, writing unit tests for apis
+                    </li>
+                    <li>
+                     using HTML, CSS, Bootstrap with ETA templating engine to support frontend.My day to day involves me working on projects 
+                    </li>
+                    <li>
+                     utilizing NodeJs, ExpressJs, Sequelize, Mysql as main Database and Redis for caching, writing unit tests for apis 
+                    </li>
+                    <li>
+                     using HTML, CSS, Bootstrap with ETA templating to support frontend
+                    </li>
                     </ul>
+                    Skills: Amazon Web Services (AWS)Skills: Amazon Web Services (AWS), Node.js · Express.js · MySQL · Embedded JavaScript (EJS) · JavaScript · Cascading Style Sheets (CSS)
+                    </em></p>
                     </div>
                 </div>
                 </div>
-
             </div>
             </section>
         </>
